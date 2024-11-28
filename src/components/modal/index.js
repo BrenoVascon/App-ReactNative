@@ -36,17 +36,17 @@ export function ModalPassword({ handleClose, password }) {
       <View style={styles.content}>
         <Text style={styles.title}>Senha Gerada</Text>
 
-        <View style={styles.innerPassword}>
-          <Text style={styles.text}>{password}</Text>
-        </View>
-
         <TextInput
           style={styles.input}
-          placeholder="Adicione um comentário"
+          placeholder="Nome da senha"
           placeholderTextColor="#aaa"
           value={comment}
           onChangeText={setComment}
         />
+
+        <View style={styles.innerPassword}>
+          <Text style={styles.text}>{password}</Text>
+        </View>
 
         <View style={styles.buttonArea}>
           <TouchableOpacity style={styles.button} onPress={handleClose}>
