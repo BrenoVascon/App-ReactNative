@@ -45,7 +45,9 @@ export function ModalPassword({ handleClose, password }) {
         />
 
         <View style={styles.innerPassword}>
-          <Text style={styles.text}>{password}</Text>
+          <Text style={styles.text} onLongPress={handleCopyPassword}>
+            {password}
+          </Text>
         </View>
 
         <View style={styles.buttonArea}>
