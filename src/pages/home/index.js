@@ -28,9 +28,9 @@ export default function Home() {
 
   return (
     <View style={styles.container}>
-      <Image source={require("../../assets/logo.png")} styles={styles.logo} />
+      <Image source={require("../../assets/logo.png")} style={styles.logo} />
 
-      <Text style={styles.title}>{size.toFixed(0)} caracteres</Text>
+      <Text style={styles.title}>{size.toFixed(0)} Caracteres</Text>
       <View style={styles.area}>
         <Slider
           style={{ height: 50 }}
@@ -68,10 +68,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   logo: {
-    marginBottom: 60,
+    marginBottom: 10,
   },
   area: {
-    marginTop: 14,
     marginBottom: 14,
     width: "80%",
     backgroundColor: "#dfdfdf",
@@ -92,5 +91,8 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
+    paddingBottom: 10,
+    fontFamily: "sans-serif",
+    fontWeight: "medium",
   },
 });

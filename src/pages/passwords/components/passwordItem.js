@@ -7,12 +7,8 @@ export function PasswordItem({ data, removePassword }) {
   const [isPasswordVisible, setPasswordVisible] = useState(false);
 
   async function handleCopyPassword() {
-    if (isPasswordVisible) {
-      await Clipboard.setStringAsync(data.password);
-      Alert.alert("Sucesso", "Senha copiada para a área de transferência!");
-    } else {
-      Alert.alert("Erro", "Você precisa visualizar a senha antes de copiá-la.");
-    }
+    await Clipboard.setStringAsync(data.password); // Copia a senha mesmo que oculta
+    Alert.alert("Sucesso", "Senha copiada para a área de transferência!");
   }
 
   return (
@@ -73,8 +69,10 @@ const styles = StyleSheet.create({
   },
   comment: {
     color: "#ccc",
-    fontSize: 12,
+    fontSize: 16,
     marginBottom: 4,
+    fontFamily: "monospace",
+    fontWeight: "bold",
   },
   iconButton: {
     padding: 5,
